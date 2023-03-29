@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--M.e.r.i.n.o >:(-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="ni.edu.uca.myuca2lavenganzadelauca.main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/acMain_CrearCoordinador"
+            app:destination="@id/crearCoordinador" />
+        <action
+            android:id="@+id/acMain_ModificarCoordinador"
+            app:destination="@id/modificarCoordinador" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearCoordinador"
+        android:name="ni.edu.uca.myuca2lavenganzadelauca.crearCoordinador"
+        android:label="fragment_crear_coordinador"
+        tools:layout="@layout/fragment_crear_coordinador" >
+        <action
+            android:id="@+id/acCrearCoordinador_Main"
+            app:destination="@id/main" />
+    </fragment>
+    <fragment
+        android:id="@+id/modificarCoordinador"
+        android:name="ni.edu.uca.myuca2lavenganzadelauca.ModificarCoordinador"
+        android:label="fragment_modificar_coordinador"
+        tools:layout="@layout/fragment_modificar_coordinador" >
+        <argument
+            android:name="coordinador"
+            app:argType="ni.edu.uca.myuca2lavenganzadelauca.Modelos.Coordinador" />
+        <action
+            android:id="@+id/acModificarCoordinador_Main"
+            app:destination="@id/main" />
+    </fragment>
+</navigation>

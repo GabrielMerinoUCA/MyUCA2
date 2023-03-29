@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".crearCoordinador">
+
+    <TextView
+        android:id="@+id/tvNombresCrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Nombres:"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/etNombresCrear"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombresCrear"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvAppellidosCrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombresCrear"
+        android:text="Apellidos:"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/etApellidosCrear"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvAppellidosCrear"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFechaNac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etApellidosCrear"
+        android:text="Fecha Nacimiento:"
+        android:textSize="20sp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llFecha"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaNac"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/etFechaCrear"
+            android:hint="Fecha"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/etMesCrear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/etMesCrear"
+            android:inputType="number"
+            android:hint="Mes"
+            app:layout_constraintStart_toEndOf="@+id/etFechaCrear"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/etYearCrear"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/etYearCrear"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="Año"
+            app:layout_constraintStart_toEndOf="@+id/etMesCrear"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <TextView
+        android:id="@+id/tvTituloCrear"
+        app:layout_constraintTop_toBottomOf="@+id/llFecha"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Titulo"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etTituloCrear"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloCrear"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvEmailCrear"
+        android:textSize="20sp"
+        android:text="Email:"
+        app:layout_constraintTop_toBottomOf="@+id/etTituloCrear"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/etEmailCrear"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailCrear"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFacultadCrear"
+        android:textSize="20sp"
+        android:text="Facultad:"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailCrear"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/etFacultadCrear"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvFacultadCrear"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:id="@+id/btnCrearCoordinador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFacultadCrear"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
